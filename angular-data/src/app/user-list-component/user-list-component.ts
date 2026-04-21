@@ -1,5 +1,14 @@
- <ul>
-    @for (name of names; track name) {
-        <li>{{name}}</li>
-    }
-  </ul>
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-user-list-component',
+  imports: [],
+  templateUrl: './user-list-component.html',
+  styleUrl: './user-list-component.css',
+})
+export class UserListComponent{
+  names: string[]; //Creiamo il nostro vettore di stringhe 
+  constructor() { 
+     this.names = ['Ari', 'Carlos', 'Felipe', 'Nate']; //Riempiamo il vettore
+  }
+}
